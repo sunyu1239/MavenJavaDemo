@@ -1,9 +1,15 @@
 package day0318;
 
 import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationTargetException;
 
+/**
+ * constructor
+ * @author sunyu
+ *
+ */
 public class ConstructorDemo {
-    public static void main(String args[]) throws NoSuchMethodException, SecurityException {
+    public static void main(String args[]) throws NoSuchMethodException, SecurityException, InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
         Class personClass=Person.class;
         //获取所有public的构造
         Constructor<Person>[] cons=personClass.getConstructors();
@@ -27,5 +33,8 @@ public class ConstructorDemo {
         //获取指定任意类型的构造
         Constructor<Person> con2=personClass.getDeclaredConstructor(String.class,String.class);
         System.out.println(con2.getParameterCount());
+        con2.setAccessible(true);
+        Person p=con2.newInstance("sunyu","female");
+        System.out.println(p);
     }
 }
