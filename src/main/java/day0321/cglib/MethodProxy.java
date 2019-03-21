@@ -1,4 +1,4 @@
-package day0321;
+package day0321.cglib;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Proxy;

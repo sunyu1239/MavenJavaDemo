@@ -1,4 +1,4 @@
-package day0321;
+package day0321.cglib;
 
 public class Person {
 	private String name;

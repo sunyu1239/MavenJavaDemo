@@ -1,4 +1,4 @@
-package day0321;
+package day0321.cglib;
 
 public class CGLibTest {
     private String name;
